@@ -1,0 +1,33 @@
+﻿<Window x:Class="Poker.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Poker.UI"
+        mc:Ignorable="d"
+        Title="Poker UI for Connection String" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="339*"/>
+            <ColumnDefinition Width="340*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="107" Margin="85,25,0,0" Stroke="#FF4D4B4B" VerticalAlignment="Top" Width="639" Grid.ColumnSpan="3" OpacityMask="#FFF9F9F9"/>
+
+        <Label x:Name="labelconfig" Content="Click to load Config File" HorizontalAlignment="Left" Margin="104,41,0,0" VerticalAlignment="Top" Width="188" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="loadFileB" Content="Load..." HorizontalAlignment="Left" Margin="107,75,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="FileName" Content="File name:" HorizontalAlignment="Left" Margin="102,100,0,0" VerticalAlignment="Top" Width="122" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="SConnectionString" HorizontalAlignment="Left" Height="23" Margin="87,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" Grid.ColumnSpan="2"/>
+        <Label Content="Select Connection String" HorizontalAlignment="Left" Margin="85,158,0,0" VerticalAlignment="Top" Width="179" FontSize="14"/>
+        <TextBox x:Name="ConnUsername" HorizontalAlignment="Left" Height="33" Margin="87,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254"  Grid.ColumnSpan="2"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="85,256,0,0" VerticalAlignment="Top" Width="179" FontSize="14"/>
+        <TextBox x:Name="SConnectionString_Copy" HorizontalAlignment="Left" Height="33" Margin="87,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254"  Grid.ColumnSpan="2"/>
+        <Label Content="Select Connection String" HorizontalAlignment="Left" Margin="85,158,0,0" VerticalAlignment="Top" Width="179" FontSize="14"/>
+        <TextBox x:Name="ServerName" HorizontalAlignment="Left" Height="33" Margin="130,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="Sever" HorizontalAlignment="Left" Margin="128,158,0,0" VerticalAlignment="Top" Width="179" FontSize="14" Grid.Column="1"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="33" Margin="130,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254"  Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="128,256,0,0" VerticalAlignment="Top" Width="179" FontSize="14" Grid.Column="1"/>
+        <Button x:Name="SaveButton" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="303,341,0,0" VerticalAlignment="Top" Width="81" Grid.ColumnSpan="2" Background="#FFF3EFEF" Height="37" FontSize="14"/>
+
+    </Grid>
+</Window>

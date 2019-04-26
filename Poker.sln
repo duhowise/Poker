@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poker", "Poker\Poker.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poker.Tests", "Poker.Tests\Poker.Tests.csproj", "{B638A363-8B05-4D63-8874-49B9A4A6266E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poker.UI", "Poker.UI\Poker.UI.csproj", "{874057B5-2E68-44E7-B6A5-8340199DFC80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,8 +30,15 @@ Global
 		{B638A363-8B05-4D63-8874-49B9A4A6266E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B638A363-8B05-4D63-8874-49B9A4A6266E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B638A363-8B05-4D63-8874-49B9A4A6266E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{874057B5-2E68-44E7-B6A5-8340199DFC80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874057B5-2E68-44E7-B6A5-8340199DFC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874057B5-2E68-44E7-B6A5-8340199DFC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874057B5-2E68-44E7-B6A5-8340199DFC80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1202416D-2325-49FB-9DAF-97D9A762CA41}
 	EndGlobalSection
 EndGlobal
