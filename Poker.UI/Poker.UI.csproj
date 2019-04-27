@@ -120,5 +120,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Poker\Poker.csproj">
+      <Project>{A6DA3151-F82F-49A2-A8C7-4FB40E51A097}</Project>
+      <Name>Poker</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
