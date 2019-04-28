@@ -12,6 +12,7 @@ namespace Poker.UI
     {
         ConfigurationPoker _configurationPoker;
         string _xml;
+        private string _filePath;
 
         public MainWindow()
         {
@@ -25,9 +26,11 @@ namespace Poker.UI
                 !string.IsNullOrWhiteSpace(Password.Text))
             {
               // ReSharper disable once StringLiteralTypo
-                var ConnectionString = $"Data Source={ServerName.Text},1433;Network Library=DBMSSOCN;Initial Catalog = VotingSystemV2; User ID = {ConnUsername.Text}; Password ={Password.Text};";
-                _configurationPoker.SetConnectionString(ConnectionList.SelectedItem.ToString(),ConnectionString);
+                var connectionString = $"Data Source={ServerName.Text},1433;Network Library=DBMSSOCN;Initial Catalog = VotingSystemV2; User ID = {ConnUsername.Text}; Password ={Password.Text};";
+                _configurationPoker.SetConnectionString(ConnectionList.SelectedItem.ToString(),connectionString);
                 _xml = _configurationPoker.RenderXml();
+                AppConfig.SaveXml(_filePath,_xml);
+                MessageBox.Show($"successfully saved {FileName.Content} to {_filePath}");
             }
             else
             {
@@ -41,8 +44,9 @@ namespace Poker.UI
             if (openFileDialog.ShowDialog() != true) return;
             try
             {
+                _filePath = openFileDialog.FileName;
                 FileName.Content += openFileDialog.SafeFileName;
-                _xml = AppConfig.LoadXml(openFileDialog.FileName);
+                _xml = AppConfig.LoadXml(_filePath);
 
                 _configurationPoker = new ConfigurationPoker(_xml);
                 var connectionStringNames = _configurationPoker.GetConnectionStringNames();
